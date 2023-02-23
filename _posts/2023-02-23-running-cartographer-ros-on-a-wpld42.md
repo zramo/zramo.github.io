@@ -9,6 +9,6 @@ By installing a Jetson Nano 2GB and a STM32 control board on it, cartographer ma
 
 The video was uploaded to BILIBILI video.
 
-<iframe src="//player.bilibili.com/player.html?bvid=BV14D4y1g7U3" scrolling="no" width="800px" height="600px" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+<iframe src="//player.bilibili.com/player.html?bvid=BV19M41177Lw" scrolling="no" width="800px" height="600px" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 
 
