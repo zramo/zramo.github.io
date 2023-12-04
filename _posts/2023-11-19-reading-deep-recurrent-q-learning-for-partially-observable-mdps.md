@@ -5,8 +5,6 @@ date: 2023-11-19 06:00:00 +0800
 categories: DRL
 ---
 
-# 论文阅读：Deep Recurrent Q-Learning for Partially Observable MDPs
-
 ## 论文简介
 
 本文针对深度强化学习实现的控制器记忆性有限和决策时需要获取当前系统状态完整信息（如完整Atari游戏屏幕）等局限性，研究了利用将卷积层后第一层全连接层替换为循环的LSTM以向DQN引入记忆性的方法，并将其称作DRQN（Deep Recurrent Q-Network）。其在通过对Atari游戏画面进行闪烁处理以人为构建的等价部分可观测情形下得到了与DQN相仿的性能。

@@ -5,8 +5,6 @@ date: 2023-12-04 06:00:00 +0800
 categories: CCS
 ---
 
-# 计算机控制系统(Computer Control System)
-
 # 第一章 概述
 
 # 第二章 计算机控制系统硬件基础
