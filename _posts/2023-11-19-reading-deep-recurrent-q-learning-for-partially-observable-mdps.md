@@ -50,9 +50,8 @@ $$
 
 ## DRQN网络设计
 
-<img title="Figure 2: DRQN convolves three times over a single-channel image of the game screen. The resulting activations are processed through time by an LSTM layer. The last two timesteps are shown here. LSTM outputs become Q-Values after passing through a fully-connected layer. Convolutional filters are depicted by rectangular sub-boxes with pointed tops." src=".\figs\2023-11-18-fig2.png" alt="" data-align="center">
+<img title="Figure 2: DRQN convolves three times over a single-channel image of the game screen. The resulting activations are processed through time by an LSTM layer. The last two timesteps are shown here. LSTM outputs become Q-Values after passing through a fully-connected layer. Convolutional filters are depicted by rectangular sub-boxes with pointed tops." src="\_posts\figs\2023-11-18-fig2.png" alt="" data-align="center">
 
-# 
 
 ## 文献来源：
 
