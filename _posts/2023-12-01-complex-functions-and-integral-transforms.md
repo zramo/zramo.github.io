@@ -16,7 +16,7 @@ categories: math
 
 - 乘法
  
-- 复数的模或绝对值记为$|z|=\sqrt{a^2+b^2}$
+- 复数的模或绝对值记为$\vert z\vert=\sqrt{a^2+b^2}$
 
 - 辐角
  
@@ -253,10 +253,10 @@ z_n\rightarrow z_0; n\rightarrow +\infty$$
  
 给定复数项级数$\sum^{\infty}_{n=1}z_n$,其中$z_n=a_n+i b_n,n=1,2,\cdots$.
 
-若正项级数$\sum^{\infty}_{n=1}|z_n|$收敛,称级数$\sum^{\infty}_{n=1}z_n$是绝对收敛的.
+若正项级数$\sum^{\infty}_{n=1}\vert z_n\vert $收敛,称级数$\sum^{\infty}_{n=1}z_n$是绝对收敛的.
 
 若级数$\sum^{\infty}_{n=1}z_n$收敛,而正项级数$
-\sum^{\infty}_{n=1}|z_n|$发散,称级数$\sum^{\infty}_{n=1}z_n$是条件收敛的.
+\sum^{\infty}_{n=1}\vert z_n\vert $发散,称级数$\sum^{\infty}_{n=1}z_n$是条件收敛的.
 
 ##### 每个绝对收敛的复数项级数其本身一定是收敛的（）该定理的逆不成立
 
@@ -272,7 +272,7 @@ z_n\rightarrow z_0; n\rightarrow +\infty$$
 
 #### 定理
  
-若复变函数$f_n(z)(n=1,2,\cdots)$均定义在集合$E$上,且有不等式$|f_n(z)| \le M_n(n = 1, 2, \cdots)$成立.
+若复变函数$f_n(z)(n=1,2,\cdots)$均定义在集合$E$上,且有不等式$\vert f_n(z)\vert  \le M_n(n = 1, 2, \cdots)$成立.
 
 如果正项级数$\sum^{\infty}_{n=1}M_n$收敛,则复变函数项级数$\sum^{\infty}_{n=1}f_n(z)$在集合$E$上**一致收敛**
  
@@ -303,13 +303,22 @@ z_n\rightarrow z_0; n\rightarrow +\infty$$
 ##### 达朗贝尔法则或检比法
  
 
-对于幂级数$$
-\sum^{\infty}_{n=0}a_n(z-z_n)^n$$
-,若极限$$
-\lim_{n \rightarrow \infty} \left| \frac{a_{n+1}}{a_n}\right| =\lambda$$
+对于幂级数
+
+$$
+\sum^{\infty}_{n=0}a_n(z-z_n)^n
+$$
+
+,若极限
+
+$$
+\lim_{n \rightarrow \infty} \left\vert  \frac{a_{n+1}}{a_n}\right\vert  =\lambda
+$$
+
 (包括$\lambda$ 为0或$+\infty$ 的情形)
 
 ,则它的收敛半径
+
 $$
 R=\begin{cases}
 +\infty, &\text{$\lambda=0$}\\
@@ -319,20 +328,26 @@ R=\begin{cases}
 0, & \text{$\lambda=+\infty$}
 \end{cases}
 $$
+
 ##### 柯西法则或检根法
  
 
 对于幂级数
+
 $$
 \sum^{\infty}_{n=0}a_n(z-z_n)^n
 $$
+
 ,若极限
+
 $$
-\lim_{n \rightarrow \infty} \sqrt[n]{|a_n|}=\lambda
+\lim_{n \rightarrow \infty} \sqrt[n]{\vert a_n\vert }=\lambda
 $$
+
 (包括$\lambda$为0或$+\infty$的情形)
 
 ,则它的收敛半径
+
 $$
 R=\begin{cases}
 +\infty, &\text{$\lambda=0$}\\
@@ -342,10 +357,11 @@ R=\begin{cases}
 0, & \text{$\lambda=+\infty$}
 \end{cases}
 $$
+
 ### 幂级数的运算
  
 $$
-f(z)\pm g(z)=\sum_{n=0}^\infty a_nz_n\pm \sum_{n=0}^\infty b_nz_n=\sum^\infty_{n=0}(a_n\pm b_n)z^n,\ \ |z|<R=min\left\{R_1,R_2\right\}$$
+f(z)\pm g(z)=\sum_{n=0}^\infty a_nz_n\pm \sum_{n=0}^\infty b_nz_n=\sum^\infty_{n=0}(a_n\pm b_n)z^n,\ \ \vert z\vert <R=min\left\{R_1,R_2\right\}$$
 
  
 $$
@@ -364,14 +380,14 @@ $$
 
  
 $$
-f[g(z)]=\sum_{n=0}^\infty a_n[g(z)]^n,\ \ |g(z)|<R_1$$
+f[g(z)]=\sum_{n=0}^\infty a_n[g(z)]^n,\ \ \vert g(z)\vert <R_1$$
 
 
 ## 泰勒级数
 
 ### 泰勒展开
  
-设函数$f(z)$在圆域$|z-z_0|<R$内解析,
+设函数$f(z)$在圆域$\vert z-z_0\vert <R$内解析,
 
 则在此圆域内$f(z)$可以展开成幂级数
 
@@ -381,7 +397,7 @@ f(z)=\sum^{\infty}_{n=0}\frac{f^{(n)}(z_0)}{n!}(z-z_0)^n$$
 
 并且此展开式是唯一的
  
-若$f(z)$在$z_0$解析，则$f(z)$在$z_0$的泰勒展开式成立的圆域的收敛半径$R=|z_0-a|$;
+若$f(z)$在$z_0$解析，则$f(z)$在$z_0$的泰勒展开式成立的圆域的收敛半径$R=\vert z_0-a\vert $;
 
 其中$R$为从$z_0$到$f(z)$的距$z_0$最近一个奇点$a$之间的距离
  
@@ -390,25 +406,25 @@ f(z)=\sum^{\infty}_{n=0}\frac{f^{(n)}(z_0)}{n!}(z-z_0)^n$$
 $$
 e^z=\sum^\infty_{n=0}\frac{1}{n!}z^n=1+z+\frac{z^2}{2!}+\frac{z^3}{3!}+\cdots+\frac{z^n}{n!}+\cdots$$
 , $$
-|z|<\infty$$
+\vert z\vert <\infty$$
 
  
 $$
 \frac{1}{1-z}=\sum^\infty_{n=0}z^n=1+z+z^2+\cdots+z^n+\cdots$$
 , $$
-|z|<1$$
+\vert z\vert <1$$
 
  
 $$
 \sin z=\sum^\infty_{n=0}\frac{(-1)^n}{(2n+1)!}z^{2n+1}=z-\frac{z^3}{3!}+\frac{z^5}{5!}-\cdots+\frac{(-1)^n}{(2n+1)!}z^{2n+1}+\cdots$$
 , $$
-|z|<\infty$$
+\vert z\vert <\infty$$
 
  
 $$
 \cos z=\sum^\infty_{n=0}\frac{(-1)^n}{(2n)!}z^{2n}=z-\frac{z^2}{2!}+\frac{z^4}{4!}-\cdots+\frac{(-1)^n}{(2n)!}z^{2n}+\cdots$$
 , $$
-|z|<\infty$$
+\vert z\vert <\infty$$
 
 
 ### 解析函数展开成泰勒级数的方法
@@ -437,7 +453,7 @@ $$
  
 $$
 
-设函数f(z)在圆环域R_1<|z-z_0|<R_2内处处解析，c为圆环域内绕z_0的任意一条正向简单闭曲线，
+设函数f(z)在圆环域R_1<\vert z-z_0\vert <R_2内处处解析，c为圆环域内绕z_0的任意一条正向简单闭曲线，
 
 则在此圆环域内，有f(z)=\sum^\infty_{n=-\infty}c_n(z-z_0)^n，且展开式唯一
 $$
@@ -451,9 +467,9 @@ $$
  
 $$
 
-设f(z)在r<|z-z_0|<R内解析，c为r<|z-z_0|<R内的任何一条正向简单闭曲线，
+设f(z)在r<\vert z-z_0\vert <R内解析，c为r<\vert z-z_0\vert <R内的任何一条正向简单闭曲线，
 
-则\oint_cf(z)dz=2\pi ic_{-1}。其中c_{-1}为f(z)在r<|z-z_0|<R
+则\oint_cf(z)dz=2\pi ic_{-1}。其中c_{-1}为f(z)在r<\vert z-z_0\vert <R
 内洛朗展开式中\frac{1}{z-z_0}的系数
 
 $$
@@ -475,7 +491,7 @@ $$
  
 $$
 
-f(z)在z_0点不解析，但在z_0的0<|z-z_0|<\delta内解析
+f(z)在z_0点不解析，但在z_0的0<\vert z-z_0\vert <\delta内解析
 $$
 
 
@@ -615,7 +631,7 @@ $$
 ### 留数的定义
  
 $$
-设z_0为f(z)的\textbf{孤立奇点}，f(z)在z_0的去心邻域0<|z-z_0|<\delta内解析，c为该域内包含z_0的任一正向简单闭曲线，
+设z_0为f(z)的\textbf{孤立奇点}，f(z)在z_0的去心邻域0<\vert z-z_0\vert <\delta内解析，c为该域内包含z_0的任一正向简单闭曲线，
 则称积分\frac{1}{2\pi i}\oint_cf(z)dz为f(z)在z_0的留数(或残留)，记作Res[f(z), z_0]=\frac{1}{2\pi i}\oint_cf(z)dz$$
 
 
@@ -669,7 +685,7 @@ $$
  
 称$Arg f'(z_0)$为映射$\omega = f(z)$在点$z_0$的旋转角
  
-称$|f′(z_0)|$为映射$\omega=f(z)$在点$z_0$的伸缩率.
+称$\vert f′(z_0)\vert $为映射$\omega=f(z)$在点$z_0$的伸缩率.
 
 ## 具有保角性和伸缩率不变的连续映射称为保形映射
  
@@ -736,7 +752,7 @@ $$
 
 (2) $f(t)$在$(-\infty, +\infty)$上绝对可积，即
 
-$$\int^{+\infty}_{-\infty}|f(t)|dt<+\infty$$
+$$\int^{+\infty}_{-\infty}\vert f(t)\vert dt<+\infty$$
 
 则$f(t)$的傅里叶积分公式收敛，且
 
@@ -817,7 +833,7 @@ f(x)\delta(x-\xi)=f(\xi)\delta(x-\xi)$$
 设$ u(t) $是单位阶跃函数, 则$ u'(t) = δ(t)$.
 
  
-$\delta(at)=\frac{1}{|a|}\delta(t)$, $a$为非零实数
+$\delta(at)=\frac{1}{\vert a\vert }\delta(t)$, $a$为非零实数
 
 ## 广义傅里叶变换
 
@@ -860,7 +876,7 @@ $F[\cos \omega_0t f(t)]=\frac{1}{2}[F(\omega-\omega_0)+F(\omega+\omega_0)]$
 ### 微分性（时域）
  
 $$
-F[f^{(n)}(t)]=(j\omega)^nF(\omega), |t|\rightarrow+\infty, f^{(n-1)}(t)\rightarrow0$$
+F[f^{(n)}(t)]=(j\omega)^nF(\omega), \vert t\vert \rightarrow+\infty, f^{(n-1)}(t)\rightarrow0$$
 
 
 ### 坐标缩放性质
@@ -869,7 +885,7 @@ F[f^{(n)}(t)]=(j\omega)^nF(\omega), |t|\rightarrow+\infty, f^{(n-1)}(t)\rightarr
 
 $$
 
-F[f(at)]=\frac{1}{|a|}F\left(\frac{\omega}{a}\right)
+F[f(at)]=\frac{1}{\vert a\vert }F\left(\frac{\omega}{a}\right)
 $$
 
 
@@ -889,10 +905,13 @@ $$
 
 ### 帕塞瓦尔定理(能量积分/瑞利定理)
  
-$$
-若记F(\omega)=F[f(t)],则有
 
-\int^{+\infty}_{-\infty}[f(t)]^2dt=\frac{1}{2\pi}\int^{+\infty}_{-\infty}|F(\omega)|d\omega$$
+若记$F(\omega)=F[f(t)]$,则有
+
+$$
+\int^{+\infty}_{-\infty}[f(t)]^2dt=\frac{1}{2\pi}\int^{+\infty}_{-\infty}\vert F(\omega)\vert d\omega
+
+$$
 
 
 ## 卷积
@@ -1002,6 +1021,6 @@ $$
  
 $$
 
- \int_{0}^{+\infty}f(t)e^{-kt}dt=L[f(t)]|_{s=k}
+ \int_{0}^{+\infty}f(t)e^{-kt}dt=L[f(t)]\vert _{s=k}
 $$
 
