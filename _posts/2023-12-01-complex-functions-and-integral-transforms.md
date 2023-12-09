@@ -630,32 +630,151 @@ $$
 
 ### 留数的定义
  
-$$
-设z_0为f(z)的\textbf{孤立奇点}，f(z)在z_0的去心邻域0<\vert z-z_0\vert <\delta内解析，c为该域内包含z_0的任一正向简单闭曲线，
-则称积分\frac{1}{2\pi i}\oint_cf(z)dz为f(z)在z_0的留数(或残留)，记作Res[f(z), z_0]=\frac{1}{2\pi i}\oint_cf(z)dz$$
+
+设$z_0$为$f(z)$的**孤立奇点**，$f(z)$在$z_0$的去心邻域$0<\vert z-z_0\vert <\delta$内解析，$c$为该域内包含$z_0$的任一正向简单闭曲线，
+则称积分$\frac{1}{2\pi i}\oint_cf(z)dz$为$f(z)$在$z_0$的留数(或残留)，记作$Res[f(z), z_0]=\frac{1}{2\pi i}\oint_cf(z)dz$
 
 
 ### 留数的计算方法
- 
-$$
 
-若z_0是f(z)的孤立奇点，则Res[f(z), z_0]=c_{-1}，其中c_{-1}为f(z)在z_0的去心邻域内洛朗展开式中(z-z_0)^{-1}的系数
-$$
-
+若$z_0$是$f(z)$的孤立奇点，则$Res[f(z), z_0]=c_{-1}$，其中$c_{-1}$为$f(z)$在$z_0$的去心邻域内洛朗展开式中$(z-z_0)^{-1}$的系数
 
 #### 可去奇点处的留数
  
+若$z_0$是$f(z)$的可去奇点，则$Res[f(z), z_0]=0$
+
+#### n阶极点处的留数
+
+若$z_0$是$f(z)$的$n$阶极点，则
+
+$$
+Res[f(z),z_0]=\frac{1}{(n-1)!}
+\lim_{z\rightarrow z_0}
+\frac{d^{n-1}}{dz^{n-1}}\left[
+    \left(z-z_0\right)^{n}f(z)
+\right]
 $$
 
-若z_0是f(z)的可去奇点，则Res[f(z), z_0]=0
+##### 证明：
+
+$$
+(z-z_0)^nf(z)=c_{-n}+c_{-(n-1)}(z-z_0)^1+\cdots+c_{-1}(z-z_0)^{m-1}+c_0(z-z_0)^n+\cdots
+$$
+
+$$
+\frac{d^{n-1}}{dz^{n-1}}\left[(z-z_0)^nf(z)\right]=
+c_{-1}(m-1)!+c_0 m(m-1)2(z-z_0)+\cdots
+$$
+
+即
+
+$$
+\lim_{z\rightarrow z_0}
+\frac{d^{n-1}}{dz^{n-1}}\left[
+    \left(z-z_0\right)^{n}f(z)
+\right]
+=c_{-1}(n-1)!
+$$
+
+整理得
+
+$$
+Res[f(z),z_0]=c_{-1}=\frac{1}{(n-1)!}
+\lim_{z\rightarrow z_0}
+\frac{d^{n-1}}{dz^{n-1}}\left[
+    \left(z-z_0\right)^{n}f(z)
+\right]
+$$
+
+##### 推论
+
+$f(z)=\frac{P(z)}{Q(z)}$，其中$P(z)$，$Q(z)$均在点$z_0$处解析，且$P(z_0)\neq 0, Q(z_0)=0, Q'(z_0)\neq 0$，则点$z_0$是$f(z)$的一阶极点，且
+
+$$
+Res\left[\frac{P(z)}{Q(z)},z_0\right]
+=\frac{P(z_0)}{Q'(z_0)}
+$$
+
+证明：
+
+$$
+f(z)=\frac{P(z)}{Q(z)}=\frac{1}{z-z_0}\frac{P(z)}{\varphi(z)}
+$$
+
+$$
+Res[f(z),z_0]=
+\lim_{z\rightarrow z_0}
+\left(z-z_0\right)f(z)
+=\lim_{z\rightarrow z_0}\frac{P(z)}{\varphi(z)}
+$$
+
+$$
+\lim_{z\rightarrow z_0}\varphi(z)
+=\lim_{z\rightarrow z_0}\left[
+    \frac{Q(z)-0}{z-z_0}
+\right]
+=\lim_{z\rightarrow z_0}\left[
+    \frac{Q(z)-Q(z_0)}{z-z_0}
+\right]
+=Q'(z_0)
+$$
+
+即
+
+$$
+Res\left[\frac{P(z)}{Q(z)},z_0\right]
+=\lim_{z\rightarrow z_0}\frac{P(z)}{\varphi(z)}
+=\frac{P(z_0)}{Q'(z_0)}
+$$
+
+###### 例题：求$Res[\frac{e^{\frac{1}{z}}}{1-z}, 0]$
+
+$$
+\begin{aligned}
+\frac{e^{\frac{1}{z}}}{1-z} =& 
+\left(\sum^\infty_{n=0}\frac{1}{n!}\frac{1}{z_n}\right)\left(\sum^\infty_{n=0}z^n\right)\\
+=& \left(1+\frac{1}{z}+\frac{1}{2!}\frac{1}{z^2}+\cdots\right)\left(1+z+z^2+\cdots\right)\\
+=& \cdots + \left(\sum^\infty_{n=1}\frac{1}{n!}\right)\frac{1}{z}+\cdots
+\end{aligned}
+$$
+
+即
+
+$$
+Res\left[\frac{e^{\frac{1}{z}}}{1-z},0\right]=c_{-1}=\sum^\infty_{n=1}\frac{1}{n!}=\sum^\infty_{n=0}\frac{1}{n!}-1=e-1
 $$
 
 
-#### m级极点处的留数
 
-##### 
+### 留数基本定理
 
-### 利用留数求解实积分
+#### 留数基本定理的推广
+
+$f(z)$ 在扩充复平面内只有有限个孤立奇点，那么在各个孤立奇点（包括$\infty$）的留数之和为0，即
+
+$$
+\sum^{n}_{k=1}Res\left[f(z), z_k\right] + Res\left[f(z), \infty\right] = 0
+$$
+
+##### 证明：
+
+$$
+\sum^{n}_{k=1}Res\left[f(z), z_k\right] = \frac{1}{2\pi i}\oint_cf(z)dz
+$$
+
+$$
+Res[f(z), \infty] = \frac{1}{2\pi i}\oint_{c^{-}}f(z)dz = - \frac{1}{2\pi i}\oint_{c}f(z)dz
+$$
+
+即
+
+$$
+\sum^{n}_{k=1}Res\left[f(z), z_k\right] + Res\left[f(z), \infty\right] = 0
+$$
+
+
+
+## 利用留数求解实积分
 
 #### 典型三种例题
 
