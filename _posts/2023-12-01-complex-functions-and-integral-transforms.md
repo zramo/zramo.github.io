@@ -24,6 +24,37 @@ categories: math
     
     - 主辐角$\arg z$
 
+## 复变函数及其极限与连续
+
+### 复平面上的点集
+
+$\partial E$
+|概念|写作|定义|
+|:-:|:-:|:-:|
+|$z_1,z_2$两点的**距离**|$\vert z_1-z_2\vert$|$\vert z_1-z_2\vert=\sqrt{(x_1-x_2)^2+(y_1-y_2)^2}$|
+|$z_0$点的$\delta$**邻域**|$U_{\delta}(z_0)$|以$z_0$为心，$\delta>0$为半径的圆的内部，即$U_{\delta}(z_0)=\left\{ z \vert\vert z-z_0\vert<\delta \right\}$|
+|**内点**||属于平面点集$E$的点$z_0$，若它的某个邻域$U_{\delta}(z_0)\subset E$，则称$z_0$点为$E$的内点|
+|集$E$的极限点(或**聚点**)||$z_0$点的任一邻域内都含有集$E$的无穷多个点|
+|界点||$z_0$点的任一邻域内既有属于$E$的点，又有不属于$E$的点|
+|**边界**|$\partial E$|$E$的所有界点组成的集合|
+|开集||集合$E$的每个点都是内点|
+|连通的||对集$E$中任意两点总存在一条属于E的折线连接这两点|
+|**区域**|$D$|**非空**平面点集$D$，是**连通的开集**|
+|闭区域|$\bar{D}$|$D\cup \partial D = \bar{D}$|
+|连续曲线||设曲线$C$的参数方程$$z=z(t)=x(t)+iy(t)\quad (a\le t \le b)$$若$x_t,y_t$在$a\le t \le b$上连续，称$C$为连续曲线|
+|简单曲线||当$a < t_1 \neq t_2 < b$时，$z(t_1) \neq z(t_2)$，即曲线$C$无重点|
+|简单闭曲线||$z(a)=z(b)$（头连尾）|
+|光滑曲线||$x'(t),y'(t)$连续且$z'(t)=x'(t)+iy(t)\neq 0$|
+|按(分)段光滑曲线||曲线$C$由有限条光滑曲线组成|
+|**单连通区域**||区域$D$内任何一条简单闭曲线的内部的所有点仍属于$D$|
+|**多(复)连通区域**||单连通区域条件不成立|
+
+### 复变函数的定义
+
+### 复变函数的极限与连续
+
+
+
 # 2 解析函数
 
 ## 解析函数的概念
@@ -46,6 +77,8 @@ $$
 
 ## 函数解析的充要条件
  
+### 函数解析性的判定
+
 柯西黎曼条件
 $$
 \frac{\partial u}{\partial x}=\frac{\partial v}{\partial y},\frac{\partial u}{\partial y}=-\frac{\partial v}{\partial x}$$
@@ -55,7 +88,17 @@ $$
 
 $u(x,y)$和$v(x,y)$在此点$(x,y)$可微,而且满足C-R方程.
 
-### 
+### 复变函数的导数形式
+
+若函数$f(z)=u(x,y)+iv(x,y)$可导，则其导数
+
+$$
+f'(z)=
+\frac{\partial u}{\partial x} + i\frac{\partial v}{\partial x}=
+\frac{\partial v}{\partial y} + i\frac{\partial v}{\partial x}=
+\frac{\partial v}{\partial y} - i\frac{\partial u}{\partial y}=
+\frac{\partial u}{\partial x} - i\frac{\partial u}{\partial x}
+$$
 
 ## 调和函数
 
