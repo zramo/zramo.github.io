@@ -30,7 +30,7 @@ categories: math
 
 $\partial E$
 |概念|写作|定义|
-|:-:|:-:|:-:|
+|:--:|:--:|:--:|
 |$z_1,z_2$两点的**距离**|$\vert z_1-z_2\vert$|$\vert z_1-z_2\vert=\sqrt{(x_1-x_2)^2+(y_1-y_2)^2}$|
 |$z_0$点的$\delta$**邻域**|$U_{\delta}(z_0)$|以$z_0$为心，$\delta>0$为半径的圆的内部，即$U_{\delta}(z_0)=\left\{ z \vert\vert z-z_0\vert<\delta \right\}$|
 |**内点**||属于平面点集$E$的点$z_0$，若它的某个邻域$U_{\delta}(z_0)\subset E$，则称$z_0$点为$E$的内点|
@@ -41,7 +41,7 @@ $\partial E$
 |连通的||对集$E$中任意两点总存在一条属于E的折线连接这两点|
 |**区域**|$D$|**非空**平面点集$D$，是**连通的开集**|
 |闭区域|$\bar{D}$|$D\cup \partial D = \bar{D}$|
-|连续曲线||设曲线$C$的参数方程$$z=z(t)=x(t)+iy(t)\quad (a\le t \le b)$$若$x_t,y_t$在$a\le t \le b$上连续，称$C$为连续曲线|
+|连续曲线||设曲线$C$的参数方程$z=z(t)=x(t)+iy(t)\quad (a\le t \le b)$，若$x_t,y_t$在$a\le t \le b$上连续，称$C$为连续曲线|
 |简单曲线||当$a < t_1 \neq t_2 < b$时，$z(t_1) \neq z(t_2)$，即曲线$C$无重点|
 |简单闭曲线||$z(a)=z(b)$（头连尾）|
 |光滑曲线||$x'(t),y'(t)$连续且$z'(t)=x'(t)+iy(t)\neq 0$|
