@@ -162,6 +162,14 @@ $$
 
 # 加权最小二乘(Weighted Least Square)及其统计性质
 
+## WLS公式
+
+$$
+\hat{\theta}_{WLS}=\left(X^T_NWX_N\right)^{-1}X_N^TWY_N
+$$
+
+当$W=I$时，即简化为普通最小二乘估计。
+
 加权最小二乘法可以克服数据饱和问题
 
 ---

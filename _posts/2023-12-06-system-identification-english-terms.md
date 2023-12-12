@@ -55,3 +55,5 @@ Fourier变换
 
 
 # 极大似然估计方法
+
+极大似然估计 Maximum Likelihood Estimation

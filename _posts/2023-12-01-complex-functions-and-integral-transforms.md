@@ -28,7 +28,6 @@ categories: math
 
 ### 复平面上的点集
 
-$\partial E$
 |概念|写作|定义|
 |:--:|:--:|:--:|
 |$z_1,z_2$两点的**距离**|$\vert z_1-z_2\vert$|$\vert z_1-z_2\vert=\sqrt{(x_1-x_2)^2+(y_1-y_2)^2}$|
