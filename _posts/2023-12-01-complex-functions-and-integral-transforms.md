@@ -31,7 +31,7 @@ categories: math
 |概念|写作|定义|
 |:--:|:--:|:--:|
 |$z_1,z_2$两点的**距离**|$\vert z_1-z_2\vert$|$\vert z_1-z_2\vert=\sqrt{(x_1-x_2)^2+(y_1-y_2)^2}$|
-|$z_0$点的$\delta$**邻域**|$U_{\delta}(z_0)$|以$z_0$为心，$\delta>0$为半径的圆的内部，即$U_{\delta}(z_0)=\{ z \vert\vert z-z_0\vert<\delta \}$|
+|$z_0$点的$\delta$**邻域**|$U_{\delta}(z_0)$|以$z_0$为心，$\delta>0$为半径的圆的内部，即$U_{\delta}(z_0)=\lbrace z \vert\vert z-z_0\vert<\delta \rbrace$|
 |**内点**||属于平面点集$E$的点$z_0$，若它的某个邻域$U_{\delta}(z_0)\subset E$，则称$z_0$点为$E$的内点|
 |集$E$的极限点(或**聚点**)||$z_0$点的任一邻域内都含有集$E$的无穷多个点|
 |界点||$z_0$点的任一邻域内既有属于$E$的点，又有不属于$E$的点|
