@@ -728,7 +728,7 @@ Res[f(z),z_0]=c_{-1}=\frac{1}{(n-1)!}
 \right]
 $$
 
-##### 推论
+##### 推论1
 
 $f(z)=\frac{P(z)}{Q(z)}$，其中$P(z)$，$Q(z)$均在点$z_0$处解析，且$P(z_0)\neq 0, Q(z_0)=0, Q'(z_0)\neq 0$，则点$z_0$是$f(z)$的一阶极点，且
 
@@ -769,26 +769,40 @@ Res\left[\frac{P(z)}{Q(z)},z_0\right]
 =\frac{P(z_0)}{Q'(z_0)}
 $$
 
-###### 例题：求$Res[\frac{e^{\frac{1}{z}}}{1-z}, 0]$
+
+##### 推论2(考试常用)
 
 $$
-\begin{aligned}
-\frac{e^{\frac{1}{z}}}{1-z} =& 
-\left(\sum^\infty_{n=0}\frac{1}{n!}\frac{1}{z_n}\right)\left(\sum^\infty_{n=0}z^n\right)\\
-=& \left(1+\frac{1}{z}+\frac{1}{2!}\frac{1}{z^2}+\cdots\right)\left(1+z+z^2+\cdots\right)\\
-=& \cdots + \left(\sum^\infty_{n=1}\frac{1}{n!}\right)\frac{1}{z}+\cdots
-\end{aligned}
+Res[f(z), \infty]=-Res\left[f(\frac{1}{z})\frac{1}{z^2},0\right]
 $$
 
-即
+常见情况：z=0为可去奇点，留数为0
 
-$$
-Res\left[\frac{e^{\frac{1}{z}}}{1-z},0\right]=c_{-1}=\sum^\infty_{n=1}\frac{1}{n!}=\sum^\infty_{n=0}\frac{1}{n!}-1=e-1
-$$
+> ###### 例题：求$Res[\frac{e^{\frac{1}{z}}}{1-z}, 0]$
+> 
+> $$
+> \begin{aligned}
+> \frac{e^{\frac{1}{z}}}{1-z} =& 
+> \left(\sum^\infty_{n=0}\frac{1}{n!}\frac{1}{z_n}\right)\left(\sum^\infty_{n=0}z^n\right)\\
+> =& \left(1+\frac{1}{z}+\frac{1}{2!}\frac{1}{z^2}+\cdots\right)\left(1+z+z^2+\cdots\right)\\
+> =& \cdots + \left(\sum^\infty_{n=1}\frac{1}{n!}\right)\frac{1}{z}+\cdots
+> \end{aligned}
+> $$
+> 
+> 即
+> 
+> $$
+> Res\left[\frac{e^{\frac{1}{z}}}{1-z},0\right]=c_{-1}=\sum^\infty_{n=1}\frac{1}{n!}=\sum^\infty_{n=0}\frac{1}{n!}-1=e-1
+> $$
 
 
 
 ### 留数基本定理
+
+
+$$
+\oint_cf(z)dz = 2\pi i\sum^{n}_{k=1}Res\left[f(z), z_k\right]
+$$
 
 #### 留数基本定理的推广
 
@@ -818,6 +832,22 @@ $$
 
 ## 利用留数求解实积分
 
+### 形如$\int_0^{2\pi}R(\sin\theta, \cos\theta)d\theta$
+
+$$
+\cos\theta=\frac{e^{i\theta}+e^{-i\theta}}{2}
+=\frac{z+z^{-1}}{2}
+$$
+
+$$
+\sin\theta=\frac{e^{i\theta}-e^{-i\theta}}{2i}
+=\frac{z-z^{-1}}{2i}
+$$
+
+$$
+d\theta=\frac{1}{ie^{i\theta}}de^{i\theta}=\frac{1}{iz}dz
+$$
+
 #### 典型三种例题
 
 ##### sin
@@ -841,6 +871,11 @@ $$
 $$
 \int^{+\infty}_{0}\frac{x\sin mx}{(x^2+a^2)^2}dx$$
 
+#### Tips
+
+最终结果如果出现虚部，则必有错误
+
+在期末考试中必出1-2个大题
 
 # 6 保形映射
  
