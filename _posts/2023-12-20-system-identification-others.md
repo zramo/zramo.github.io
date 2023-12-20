@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "系统辨识：其他知识点整理"
-date: 2023-12-21 06:00:00 +0800
+date: 2023-12-20 06:00:00 +0800
 categories: system_identification
 ---
 
