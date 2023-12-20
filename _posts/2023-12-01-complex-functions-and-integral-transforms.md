@@ -282,23 +282,22 @@ z_n\rightarrow z_0; n\rightarrow +\infty$$
 
 #### 定理
  
-复数项级数$$
-\sum^{\infty}_{n=1}z_n(z_n=a_n+i b_n,n=1,2,\cdots)$$
+复数项级数 $
+\sum^{\infty}_{n=1}z_n(z_n=a_n+i b_n,n=1,2,\cdots)$ 
 收敛的充分必要条件是
 
-实数项级数$\sum^{\infty}_{n=1}a_n$和级数$\sum^{\infty}_{n=1}b_n$同时收敛
+实数项级数 $\sum^{\infty}_{n=1}a_n$ 和级数 $\sum^{\infty}_{n=1}b_n$ 同时收敛
  
-复数项级数$
-\sum^{\infty}_{n=1}z_n$收敛的必要条件是$
-\lim_{n\rightarrow \infty} z_n=0$
+复数项级数 $
+\sum^{\infty}_{n=1}z_n$ 收敛的必要条件是 $
+\lim_{n\rightarrow \infty} z_n=0$ 
 
  
-给定复数项级数$\sum^{\infty}_{n=1}z_n$,其中$z_n=a_n+i b_n,n=1,2,\cdots$.
+给定复数项级数 $\sum^{\infty}_{n=1}z_n$ ,其中 $z_n=a_n+i b_n,n=1,2,\cdots$ .
 
-若正项级数$\sum^{\infty}_{n=1}\vert z_n\vert $收敛,称级数$\sum^{\infty}_{n=1}z_n$是绝对收敛的.
+若正项级数 $\sum^{\infty}_{n=1}\vert z_n\vert $ 收敛,称级数 $\sum^{\infty}_{n=1}z_n$ 是绝对收敛的.
 
-若级数$\sum^{\infty}_{n=1}z_n$收敛,而正项级数$
-\sum^{\infty}_{n=1}\vert z_n\vert $发散,称级数$\sum^{\infty}_{n=1}z_n$是条件收敛的.
+若级数 $\sum^{\infty}_{n=1}z_n$ 收敛,而正项级数 $\sum^{\infty}_{n=1}\vert z_n\vert $ 发散,称级数 $\sum^{\infty}_{n=1}z_n$ 是条件收敛的.
 
 ##### 每个绝对收敛的复数项级数其本身一定是收敛的（）该定理的逆不成立
 
