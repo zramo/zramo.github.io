@@ -845,6 +845,61 @@ $$
 d\theta=\frac{1}{ie^{i\theta}}de^{i\theta}=\frac{1}{iz}dz
 $$
 
+## 形如$\int_{-\infty}^{\infty}R(x)dx$
+
+$$
+R(x)=\frac{P(x)}{Q(x)}=\frac{x^n+a_1x^{n-1}+\cdots+a_n}{x_m+b_1x^{m-1}+\cdots+b_m},\quad m-n\ge 2
+$$
+
+$$
+\int_{-\infty}^{\infty}R(x)e^{i\alpha x} dx=
+2\pi i\sum^n_{k=1}Res\left[R(z),z_k\right]
+$$
+
+其中$z_k(k=1,\cdots,n)$为$R(z)$在上半平面内（$Im z > 0$）的全部孤立奇点
+
+## 形如$\int_{-\infty}^{\infty}R(x)e^{i\alpha x} dx\ (\alpha>0)$，$R(x)$在实轴上无奇点
+
+$$
+R(x)=\frac{P(x)}{Q(x)}=\frac{x^n+a_1x^{n-1}+\cdots+a_n}{x_m+b_1x^{m-1}+\cdots+b_m},\quad m-n\ge 1
+$$
+
+$$
+\int_{-\infty}^{\infty}R(x)e^{i\alpha x} dx=
+2\pi i\sum^n_{k=1}Res\left[R(z)e^{i\alpha z},z_k\right]
+$$
+
+其中$z_k(k=1,\cdots,n)$为$R(z)$在上半平面内（$Im z > 0$）的全部孤立奇点
+
+> $$
+> \int_{-\infty}^{\infty}R(x)\cos(\alpha x) dx=
+> Re\left[
+> \int_{-\infty}^{\infty}R(x)e^{i\alpha x} dx
+> \right]
+> $$
+> 
+> $$
+> \int_{-\infty}^{\infty}R(x)\sin(\alpha x) dx=
+> Im\left[
+> \int_{-\infty}^{\infty}R(x)e^{i\alpha x} dx
+> \right]
+> $$
+
+
+## 形如$\int_{-\infty}^{\infty}R(x)e^{i\alpha x} dx\ (\alpha>0)$，$R(x)$在实轴上只有有限个一阶极点
+
+$$
+R(x)=\frac{P(x)}{Q(x)}=\frac{x^n+a_1x^{n-1}+\cdots+a_n}{x_m+b_1x^{m-1}+\cdots+b_m},\quad m-n\ge 1
+$$
+
+$$
+\int_{-\infty}^{\infty}R(x)e^{i\alpha x} dx=
+\pi i\sum^p_{k=1}Res\left[R(z)e^{i\alpha z},x_k\right]+2\pi i\sum^q_{k=1}Res\left[R(z)e^{i\alpha z},z_k\right]
+$$
+
+其中$x_k(k=1,\cdots,p)$为$R(z)$在实轴上的一阶极点，$z_k(k=1,\cdots,q)$为$R(z)$在上半平面内（$Im z > 0$）的孤立奇点
+
+
 #### 典型三种例题
 
 ##### sin
