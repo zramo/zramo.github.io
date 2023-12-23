@@ -15,6 +15,6 @@ categories: intelligent_control
 
 模糊神经网络FNN Fuzzy Neural Network
 
-人工神经网络ANN Artificial Neural Network
+**人工神经网络ANN Artificial Neural Network**
 
 RBF神经网络（径向基函数神经网络） Radical Basis Function Neural Network

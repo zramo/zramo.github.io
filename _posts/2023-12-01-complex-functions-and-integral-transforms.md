@@ -842,6 +842,12 @@ $$
 d\theta=\frac{1}{ie^{i\theta}}de^{i\theta}=\frac{1}{iz}dz
 $$
 
+即可变换为$|z|=1$沿正向积分如下
+
+$$
+\int_0^{2\pi}R(\sin\theta, \cos\theta)d\theta=\int_{|z|=1}R\left[\frac{z-z^{-1}}{2i}, \frac{z+z^{-1}}{2}\right]\frac{1}{iz}dz
+$$
+
 ## 形如$\int_{-\infty}^{\infty}R(x)dx$
 
 $$
@@ -882,6 +888,7 @@ $$
 > \right]
 > $$
 
+$\int_0^{+\infty}$及$\int_{-\infty}^0$情形下考虑变换为$\frac{1}{2}\int_{-\infty}^{+\infty}$
 
 ## 形如$\int_{-\infty}^{\infty}R(x)e^{i\alpha x} dx\ (\alpha>0)$，$R(x)$在实轴上只有有限个一阶极点
 
@@ -938,6 +945,23 @@ $$
 
 # 7 傅里叶变换
 
+## 单位脉冲函数($\delta$函数)
+
+### 定义
+
+称一个函数为$\delta$函数，并记之为$\delta(t)$，如果其满足
+
+$$
+\delta(t)=\begin{cases}
+0, & t\neq 0\\
+\infty, & t=0
+\end{cases}
+$$
+
+$$
+\int_{-\infty}^{+\infty}\delta(t)dt=1
+$$
+
 ## 定义
 
 ### 积分变换
@@ -960,30 +984,40 @@ $f(t)$ & \rightarrow&$F(\tau)$
 
 ### 狄利克雷条件
 
-#### 除去有限个第一类间断点外，处处连续
+ - 除去有限个第一类间断点外，处处连续
 
-#### 分段单调，单调区间的个数有限
+ - 分段单调，单调区间的个数有限
 
-### 傅里叶级数
+### 傅立叶级数
  
 如果一个以T为周期的函数$f_T(t)$在$[-\frac{T}{2},\frac{T}{2}]$上满足狄利克雷条件,则$f_T(t)$的傅里叶级数
 
 $$
-f_T(t)~\frac{a_0}{2}+\sum^\infty_{n=1}[a_n\cos(n\omega t)+ b_n\sin(n\omega t)]$$
+f_T(t)\sim\frac{a_0}{2}+\sum^\infty_{n=1}[a_n\cos(n\omega t)+ b_n\sin(n\omega t)]$$
 
+> t为连续点时$\sim$可改为$=$，参见泰勒展开
 
 在$[-\frac{T}{2},\frac{T}{2}]$上处处收敛，且在$f_T(t)$的连续点处极数收敛于$f_T(t)$,其中
 
 $$
+\omega=\frac{2\pi}{T}\\
+$$
 
-\omega=\frac{2\pi}{T}
-
+$$
 a_0=\frac{2}{T}\int^{\frac{T}{2}}_{-\frac{T}{2}}f_T(t)dt
+$$
 
+$$
 a_n=\frac{2}{T}\int^{\frac{T}{2}}_{-\frac{T}{2}}f_T(t)\cos(n\omega t)dt (n = 1,2,3,\cdots)
+$$
 
+$$
 b_n=\frac{2}{T}\int^{\frac{T}{2}}_{-\frac{T}{2}}f_T(t)\sin(n\omega t)dt (n = 1,2,3,\cdots)
 $$
+
+> 非周期函数计算傅立叶级数
+> - 延拓
+> - $T\rightarrow\infty$
 
 
 ### 傅氏积分定理
@@ -1002,7 +1036,7 @@ $$\int^{+\infty}_{-\infty}\vert f(t)\vert dt<+\infty$$
 则$f(t)$的傅里叶积分公式收敛，且
 
 $$
-\frac{1}{2\pi}\int_{-\infty}^{+\infty}\left[\int_{-\infty}^{+\infty}f(\tau)e^{-i\omega \tau}d\tau\right]e^{i\omega t}d\omega=
+\frac{1}{2\pi}\int_{-\infty}^{+\infty}\left[\int_{-\infty}^{+\infty}f(t)e^{-i\omega t}dt\right]e^{i\omega t}d\omega=
 \begin{cases}
 f(t), & t是f(t)的连续点\\
 
@@ -1086,9 +1120,9 @@ $\delta(at)=\frac{1}{\vert a\vert }\delta(t)$, $a$为非零实数
 
 |$F[\delta(t)]=1$ | $F^{-1}[1]=\delta(t)$ |
 |:--:|:--:|
-|$F[\delta(t-t_0)]=e^{-i\omega t_0}$ | $F^{-1}[e^{-i\omega t_0}]=\delta(t-t_0)$|
+|$F[\delta(t-t_0)]=e^{-i\omega_0 t}$ | $F^{-1}[e^{-i\omega t_0}]=\delta(t-t_0)$|
 | $F[1]=2\pi\delta(\omega)$ | $F^{-1}[2\pi\delta(\omega)]=1$ |
-| $F[e^{i\omega t_0}]=2\pi\delta(\omega-\omega_0)$ | $F^{-1}[2\pi\delta(\omega-\omega_0)]=e^{i\omega t_0}$ |
+| $F[e^{i\omega_0 t}]=2\pi\delta(\omega-\omega_0)$ | $F^{-1}[2\pi\delta(\omega-\omega_0)]=e^{i\omega t_0}$ |
 
 ## 傅里叶变换的性质
 
@@ -1268,4 +1302,3 @@ $$
 
  \int_{0}^{+\infty}f(t)e^{-kt}dt=L[f(t)]\vert _{s=k}
 $$
-
