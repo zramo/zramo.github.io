@@ -5,8 +5,11 @@ date: 2023-12-14 06:00:00 +0800
 categories: intelligent_control
 ---
 
+<iframe src="//player.bilibili.com/player.html?aid=91865493&bvid=BV1H7411K7Wq&cid=156862248&p=6" scrolling="no" width="800px" height="600px" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 
-概念表
+# 模糊数学
+
+## 模糊*关系*的基本运算
 
 |概念|含义|
 |:--:|:--:|
@@ -15,13 +18,32 @@ categories: intelligent_control
 |$\wedge$|取小（逻辑与），如$0.8\wedge 0.6=0.6$|
 
 
+设A，B为U上的两个模糊关系矩阵，分别表示为
+$$
+A=\begin{bmatrix}
+a_{11} & \cdots & \cdots & a_{1n}\\
+a_{21} & \cdots & \cdots & a_{2n}\\
+\vdots & \ddots & \ddots & \vdots\\
+a_{n1} & \cdots & \cdots & a_{nn}\\
+\end{bmatrix}
+=(a_{ij})_{n\times n},
+B=\begin{bmatrix}
+b_{11} & \cdots & \cdots & b_{1n}\\
+b_{21} & \cdots & \cdots & b_{2n}\\
+\vdots & \ddots & \ddots & \vdots\\
+b_{n1} & \cdots & \cdots & b_{nn}\\
+\end{bmatrix}
+=(b_{ij})_{n\times n}
+$$
 
 |概念|表达式|含义|
 |:--:|:--:|:--:|
-|并|$C=A\cup B$|$C_{ij}=\vee[a_{ij},b_{ij}]=a_{ij}\vee b_{ij}$，即逐元素取大|
-|交|$C=A\cap B$|$C_{ij}=\wedge[a_{ij},b_{ij}]=a_{ij}\wedge b_{ij}$，即逐元素取小|
+|相等|$A$与$B$相等|$a_{ij}=b_{ij}, \forall i, j$|
+|包含|$A$包含$B$|$a_{ij}\ge b_{ij}, \forall i, j$|
+|并|$C=A\cup B$|$c_{ij}=\vee[a_{ij},b_{ij}]=a_{ij}\vee b_{ij}$，即逐元素取大|
+|交|$C=A\cap B$|$c_{ij}=\wedge[a_{ij},b_{ij}]=a_{ij}\wedge b_{ij}$，即逐元素取小|
 |补|$A\rightarrow\bar A$|$\bar A = [1-a_{ij}]$，即逐元素取补|
-|乘（合成）|$C=A\circ B$|$C_{ij}=\mathop\vee\limits_{k=1}^{n}\left[a_{ik}\wedge b_{kj}\right]$，即按照矩阵乘法运算顺序先取小后取大|
+|乘（合成）|$C=A\circ B$|$c_{ij}=\mathop\vee\limits_{k=1}^{n}\left[a_{ik}\wedge b_{kj}\right]$，即按照矩阵乘法运算顺序先取小后取大|
 
 **给出模糊矩阵，计算模糊矩阵的交、并与合成**
 
@@ -58,12 +80,26 @@ categories: intelligent_control
 Zadeh模糊集合理论不能满足互补律，即有
 $$
 \bar{A}\cup A\neq \Omega\\
-\bar{A}\cap A\neq \empty
+\bar{A}\cap A\neq \emptyset
 $$
 
-$A\circ B$类似于矩阵乘法运算，12取小，01取大
-
 <img title="模糊控制器的各个部分含义" src="\assets\images\intelligent_control\fuzzy_controller.svg" alt="" data-align="center">
+
+
+# 模糊控制器的设计
+
+### 多输入推理-削顶法
+
+#### 理论推导
+
+$$
+\begin{aligned}
+C'&=(A'\ and\ B')\circ[(A\ and\ B)\rightarrow C]\\
+&=[A'\circ(A\rightarrow C)]\cap[B'\circ(B\rightarrow C)]
+\end{aligned}
+$$
+
+# 重点
 
 画**模糊控制器的结构框架**（模糊化 推理 反模糊）
 
@@ -87,8 +123,6 @@ $A\circ B$类似于矩阵乘法运算，12取小，01取大
     多输入多规则推理
     模糊集合的合成、取大取小、交并补计算
 
-拓扑图和拉普拉斯连通性的计算
-给出邻接矩阵判断连通性，阐述矩阵性质（可能给出联合连通图）
 
 **消顶法的理论推导：不懂要问**
 

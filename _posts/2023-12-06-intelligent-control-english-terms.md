@@ -13,7 +13,31 @@ categories: intelligent_control
 
 协同控制 cooperative control
 
+# 模糊控制
+
 模糊控制 Fuzzy Control
+
+推理机 Inference mechanism
+
+模糊化接口 Fuzzification
+
+规则库 Rule-base
+
+反模糊化接口 Defuzzification
+
+模糊集合（Fuzzy Sets）
+
+隶属度（Degree of Memembership）
+
+模糊支集（Fuzzy Support Set）
+
+单点模糊集
+（Singleton Fuzzy Sets）
+
+$\alpha$截集($\alpha$-Cut)
+
+
+# 神经网络
 
 模糊神经网络FNN Fuzzy Neural Network
 
