@@ -5,28 +5,68 @@ date: 2023-12-14 06:00:00 +0800
 categories: intelligent_control
 ---
 
-## 给出模糊矩阵，计算模糊矩阵的交、并与合成
 
-### 交、并：取大取小
+概念表
+|概念|含义|
+|:--:|:--:|
+|模糊关系|自返性关系、对称性关系、传递性关系|
+|$\vee$|取大（逻辑或），如$0.5\vee 0.8=0.8$|
+|$\wedge$|取小（逻辑与），如$0.8\wedge 0.6=0.6$|
+|||
 
-### 合成$R\circ S$
 
+
+|概念|表达式|含义|
+|:--:|:--:|:--:|
+|并|$C=A\cup B$|$C_{ij}=\vee[a_{ij},b_{ij}]=a_{ij}\vee b_{ij}$，即逐元素取大|
+|交|$C=A\cap B$|$C_{ij}=\wedge[a_{ij},b_{ij}]=a_{ij}\wedge b_{ij}$，即逐元素取小|
+|补|$A\rightarrow\bar A$|$\bar A = [1-a_{ij}]$，即逐元素取补|
+|乘（合成）|$C=A\circ B$|$C_{ij}=\mathop\vee\limits_{k=1}^{n}\left[a_{ik}\wedge b_{kj}\right]$，即按照矩阵乘法运算顺序先取小后取大|
+
+**给出模糊矩阵，计算模糊矩阵的交、并与合成**
+
+
+> ### 例题
+> $$
+> A=\begin{bmatrix}0.8&0.7\\0.5&0.3\end{bmatrix},
+> B=\begin{bmatrix}0.2&0.4\\0.6&0.9\end{bmatrix}
+> $$
+> 
+> $$
+> \begin{aligned}
+> A\circ B&=\begin{bmatrix}
+> (0.8\wedge0.2)\vee(0.7\wedge0.6)&(0.8\wedge0.4)\vee(0.7\wedge0.9)\\
+> (0.5\wedge0.2)\vee(0.3\wedge0.6)&(0.5\wedge0.4)\vee(0.3\wedge0.9)
+> \end{bmatrix}\\
+> &=\begin{bmatrix}
+> 0.2\vee0.6&0.4\vee0.7\\
+> 0.2\vee0.3&0.4\vee0.3
+> \end{bmatrix}
+> =\begin{bmatrix}
+> 0.6&0.7\\
+> 0.3&0.4
+> \end{bmatrix}
+> \end{aligned}
+> $$
+> 
+
+
+
+
+普通集合中的运算性质除互补律外同样适用于模糊集合
+
+Zadeh模糊集合理论不能满足互补律，即有
 $$
-A=\begin{pmatrix}
-1 & 0\\
-2 & 1
-\end{pmatrix}
-,\quad
-B=\begin{pmatrix}
-2 & -1\\
-3 & 4
-\end{pmatrix}
+\bar{A}\cup A\neq \Omega\\
+\bar{A}\cap A\neq \empty
 $$
 
 $A\circ B$类似于矩阵乘法运算，12取小，01取大
 
+<img title="模糊控制器的各个部分含义" src="\assets\images\intelligent_control\fuzzy_controller.svg" alt="" data-align="center">
 
 画**模糊控制器的结构框架**（模糊化 推理 反模糊）
+
 
 **量化因子和比例因子的计算**
 
@@ -54,21 +94,3 @@ $A\circ B$类似于矩阵乘法运算，12取小，01取大
 
 一阶系统的一致性问题和跟踪控制问题理论推导
 
-会画神经元的MP模型，会说工作原理
-
-常见的神经元激活函数（四个名字和数学表达式）
-
-人工智能>机器学习>神经网络>深度学习
-
-支持向量机SVF属于机器学习不属于神经网络
-
-Hebb学习算法无导师
-
-为什么BP易陷入局部极小，RBF不易
-粒子群等全局优化算法跳出局部极小
-
-为什么RBF收敛速度快
-
-为什么RBF易于用于线性分类
-
-感知机网络：分类（分类要会做，考计算题）

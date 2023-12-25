@@ -13,6 +13,8 @@ categories: intelligent_control
 
 协同控制 cooperative control
 
+模糊控制 Fuzzy Control
+
 模糊神经网络FNN Fuzzy Neural Network
 
 **人工神经网络ANN Artificial Neural Network**
