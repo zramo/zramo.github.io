@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "智能控制：模糊控制总结"
-date: 2023-12-14 06:00:00 +0800
+date: 2024-01-04 06:00:00 +0800
 categories: intelligent_control
 ---
 
@@ -71,6 +71,26 @@ $$
 > $$
 > 
 
+> ### 例题
+> $$
+> A=\begin{bmatrix}0.8&0.7\\0.5&0.3\end{bmatrix},
+> B=\begin{bmatrix}0.2\\0.6\end{bmatrix}
+> $$
+> 
+> $$
+> \begin{aligned}
+> A\wedge B&=\begin{bmatrix}
+> (0.8\wedge0.2)&(0.7\wedge0.2)\\
+> (0.5\wedge0.6)&(0.3\wedge0.6)
+> \end{bmatrix}\\
+> &=\begin{bmatrix}
+> 0.2&0.2\\
+> 0.5&0.3
+> \end{bmatrix}
+> \end{aligned}
+> $$
+> 
+
 
 
 
@@ -84,6 +104,12 @@ $$
 
 <img title="模糊控制器的各个部分含义" src="\assets\images\intelligent_control\fuzzy_controller.svg" alt="" data-align="center">
 
+
+|概念|含义|
+|:--:|:--:|
+|$\mu$|隶属度函数|
+
+“极”=4，“很”=2，“相当”=  1.25，“较”=0.75，“稍微”=0.25.
 
 # 模糊控制器的设计
 
@@ -239,3 +265,8 @@ $\omega(k+1)=\omega(k)-(y-\overline{y})\frac{\partial y}{\partial w}=\omega(k)-(
 计算题
 
 综合题15分，模糊控制器设计
+
+吊钟型（高斯型）隶属度函数需要2个参数$\mu$和$\sigma$表示
+
+三角形、梯形隶属度函数需要3个参数确定
+

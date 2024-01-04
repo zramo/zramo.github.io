@@ -106,6 +106,24 @@ f(t), & t是f(t)的连续点\\
 \end{cases}
 $$
 
+实际应用中常利用欧拉公式将傅氏积分公式转化为三角形式，即
+
+$$
+\begin{aligned}
+f(t)=&\frac{1}{\pi}\int_{0}^{+\infty}\left[\int_{-\infty}^{+\infty}f(\tau)\cos\omega (t-\tau) d\tau\right]e^{i\omega t}d\omega
+\end{aligned}
+$$
+
+> 计算中常用分部积分法
+> $$
+> \int udv=uv-\int vdu
+> $$
+> 对于定积分则有
+> $$
+> \int_a^b udv=uv\vert^b_a-\int^b_a vdu
+> $$
+> 证明：$(uv)'=u'v+uv'$移项后求不定积分
+
 
 ### 傅里叶变换
 
