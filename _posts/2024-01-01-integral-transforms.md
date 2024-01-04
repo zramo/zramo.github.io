@@ -24,6 +24,44 @@ $$
 \int_{-\infty}^{+\infty}\delta(t)dt=1
 $$
 
+### $\delta$函数的性质
+
+$$
+\int^{+\infty}_{-\infty}\delta'(t)f(t)dt=
+-\int^{+\infty}_{-\infty}\delta(t)f'(t)dt
+$$
+
+$$
+\int^{+\infty}_{-\infty}\delta^{(n)}(t)f(t)dt=
+(-1)^n\int^{+\infty}_{-\infty}\delta(t)f^{(n)}(t)dt
+$$
+
+$$
+\int^{+\infty}_{-\infty}\delta(t-t_0)f(t)dt=f(t_0)
+$$
+
+$$
+\delta(at)=\frac{1}{\vert a\vert}\delta(t)
+$$
+
+$$
+\delta^{(n)}(-t)=(-1)^n\delta^{(n)}(t)
+$$
+
+### 弱意义下相等
+
+若对于任意的在$(-\infty,+\infty)$上连续的函数$f(t)$，恒有
+
+$$
+\int_{-\infty}^{+\infty}f(t)\varphi(t)dt=
+\int_{-\infty}^{+\infty}f(t)\psi(t)dt
+$$
+
+则称函数$\varphi(t)$与$\psi(t)$在弱意义下是**相等**的，记作$\varphi(t)\overset{\text{弱}}{=}\psi(t)$，或简记为$\varphi(t)=\psi(t)$
+
+
+> 注意换元时若变量换元前后反号则需交换积分上下限
+
 ## 定义
 
 ### 积分变换
@@ -36,11 +74,13 @@ F(\tau)=\int^b_af(t)k(t,\tau)dt$$
 
 其中的二元函数$k(t, τ )$称为积分核,$ −∞ ≤ a < b ≤ +∞$.
 
+$$
 \begin{aligned}
-$f(t)$ & \rightarrow&$F(\tau)$
+f(t) & \rightarrow&F(\tau)\\
 
 原像函数&&像函数
 \end{aligned}
+$$
 
 积分核$k(t, τ )$的不同取法决定了不同的积分变换.
 
