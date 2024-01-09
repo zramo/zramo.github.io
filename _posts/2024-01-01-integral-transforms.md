@@ -26,6 +26,22 @@ $$
 
 ### $\delta$函数的性质
 
+筛选性
+
+$$
+\int^{+\infty}_{-\infty}\delta(t-t_0)f(t)dt=f(t_0)
+$$
+
+ 
+对称性$$
+\delta(x-\xi)=\delta(\xi-x)$$
+
+ 
+$\delta$函数与普通函数的乘积
+$$f(x)\delta(x-\xi)=f(\xi)\delta(x-\xi)$$
+
+设$ u(t) $是单位阶跃函数, 则$ u'(t) = δ(t)$.
+ 
 $$
 \int^{+\infty}_{-\infty}\delta'(t)f(t)dt=
 -\int^{+\infty}_{-\infty}\delta(t)f'(t)dt
@@ -34,10 +50,6 @@ $$
 $$
 \int^{+\infty}_{-\infty}\delta^{(n)}(t)f(t)dt=
 (-1)^n\int^{+\infty}_{-\infty}\delta(t)f^{(n)}(t)dt
-$$
-
-$$
-\int^{+\infty}_{-\infty}\delta(t-t_0)f(t)dt=f(t_0)
 $$
 
 $$
@@ -198,48 +210,19 @@ f (t)=\frac{1}{2\pi}\int_{-\infty}^{+\infty}\left[\int_{-\infty}^{+\infty}f(\tau
  
 从几何的角度看, 求一个函数的傅里叶变换就是求它在坐标系 $\{e^{iωx}\}_{x∈R}$ 下的坐标,而逆变换就是由坐标还原函数的过程.
 
-#### 常用函数的傅里叶变换
- 
-(阶跃函数)$$
-F[u(t)]=\frac{1}{j\omega}+\pi\delta(\omega)$$
-
- 
-(单位脉冲函数)$$
-F[\delta(t)]=1$$
-
- 
-$$
-F[1]=2\pi\delta(\omega)$$
-
- 
-单位脉冲函数\delta(x)
-
-#### 性质
- 
-筛选性$$
-\int^{+\infty}_{-\infty}\delta(x-\xi)\varphi(x)dx=\varphi(\xi)$$
-
- 
-对称性$$
-\delta(x-\xi)=\delta(\xi-x)$$
-
- 
-$\delta$函数与普通函数的乘积$$
-f(x)\delta(x-\xi)=f(\xi)\delta(x-\xi)$$
-
- 
-
-设$ u(t) $是单位阶跃函数, 则$ u'(t) = δ(t)$.
-
- 
-$\delta(at)=\frac{1}{\vert a\vert }\delta(t)$, $a$为非零实数
 
 ## 广义傅里叶变换
 
 ### 需要记住的公式
 
+#### 常用函数的傅里叶变换
+ 
+|$f(t)$|$F[f(t)]$|
+|------|---------|
+|阶跃函数$u(t)$|$\frac{1}{j\omega}+\pi\delta(\omega)$|
+|单位脉冲函数$\delta(t)$|$1$|
+|$1$|$2\pi\delta(\omega)$|
 |$F[\delta(t)]=1$ | $F^{-1}[1]=\delta(t)$ |
-|:--:|:--:|
 |$F[\delta(t-t_0)]=e^{-i\omega_0 t}$ | $F^{-1}[e^{-i\omega t_0}]=\delta(t-t_0)$|
 | $F[1]=2\pi\delta(\omega)$ | $F^{-1}[2\pi\delta(\omega)]=1$ |
 | $F[e^{i\omega_0 t}]=2\pi\delta(\omega-\omega_0)$ | $F^{-1}[2\pi\delta(\omega-\omega_0)]=e^{i\omega t_0}$ |
@@ -260,11 +243,15 @@ F[F(t)]=2\pi f(-\omega)$$
  
 $$
 设F[f(t)]=F(\omega),则
+$$
 
+$$
 F[f(t\pm t_0)]=e^{\pm i\omega t_0}F[f(t)]
+$$
 
-F^{-1}[F(\omega\pm \omega_0)]=e^{\mp i\omega_0 t}f(t)$$
-
+$$
+F^{-1}[F(\omega\pm \omega_0)]=e^{\mp i\omega_0 t}f(t)
+$$
 
 #### 推论
  
@@ -290,17 +277,17 @@ $$
 
 ### 乘积定理
  (see:帕塞瓦尔定理(能量积分/瑞利定理)) 
-$$
-若记F_1(\omega)=F[f_1(t)],F_2(\omega)=F[f_2(t)],则有
 
+若记$F_1(\omega)=F[f_1(t)],F_2(\omega)=F[f_2(t)]$,则有
+
+$$
 \begin{aligned}
 \int^{+\infty}_{-\infty} f_1(t)f_2(t)dt
-&=\frac{1}{2\pi}\int^{+\infty}_{-\infty}\overline{F_1(\omega)}F_2(\omega)d\omega
+&=\frac{1}{2\pi}\int^{+\infty}_{-\infty}\overline{F_1(\omega)}F_2(\omega)d\omega\\
 
 &=\frac{1}{2\pi}\int^{+\infty}_{-\infty} F_1(\omega)\overline{F_2(\omega)}d\omega
 \end{aligned}
 $$
-
 
 ### 帕塞瓦尔定理(能量积分/瑞利定理)
  
@@ -308,10 +295,13 @@ $$
 若记$F(\omega)=F[f(t)]$,则有
 
 $$
-\int^{+\infty}_{-\infty}[f(t)]^2dt=\frac{1}{2\pi}\int^{+\infty}_{-\infty}\vert F(\omega)\vert d\omega
+\int^{+\infty}_{-\infty}[f(t)]^2dt=\frac{1}{2\pi}\int^{+\infty}_{-\infty}\vert F(\omega)\vert^2 d\omega
 
 $$
 
+### 微分性质
+
+### 积分性质
 
 ## 卷积
 
@@ -363,16 +353,11 @@ L[f(t)]=\int
 
 ## 常用函数的拉普拉斯变换
  
-$$
-L[e^{kt}]=\frac{1}{s-k}$$
-
- 
-$$
-L[t^m]=\frac{m!}{s^{m+1}}$$
-(m是自然数)
- 
-$$
-L[u(t)]=L[1]=\frac{1}{s}$$
+||
+|--|
+|$L[e^{kt}]=\frac{1}{s-k}$|
+|$L[t^m]=\frac{m!}{s^{m+1}}$(m是自然数)|
+|$L[u(t)]=L[1]=\frac{1}{s}$|
 
  
 $$
@@ -422,3 +407,5 @@ $$
 
  \int_{0}^{+\infty}f(t)e^{-kt}dt=L[f(t)]\vert _{s=k}
 $$
+
+拉普拉斯变换考试时必出一个大题
