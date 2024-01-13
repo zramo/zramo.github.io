@@ -353,23 +353,14 @@ L[f(t)]=\int
 
 ## 常用函数的拉普拉斯变换
  
-||
+|常用函数的拉普拉斯变换|
 |--|
 |$L[e^{kt}]=\frac{1}{s-k}$|
 |$L[t^m]=\frac{m!}{s^{m+1}}$(m是自然数)|
 |$L[u(t)]=L[1]=\frac{1}{s}$|
-
- 
-$$
-L[\delta(t)]=1$$
-
- 
-$$
-L[\sin kt]=\frac{k}{s^2+k^2}$$
-
-
-$$
-L[\cos kt]=\frac{s}{s^2+k^2}$$
+|$L[\delta(t)]=1$|
+|$L[\sin kt]=\frac{k}{s^2+k^2}$|
+|$L[\cos kt]=\frac{s}{s^2+k^2}$|
 
  
 $$
@@ -381,7 +372,53 @@ L[f(t)]=\frac{1}{1-e^{-Ts}}\int^T_0f(t)dt$$
 
 ## 性质
 
-### 微分性（时域）
+### 线性性质
+
+设$\alpha, \beta$是常数，$F_1(s)=L[f_1(t)]$，，$F_2(s)=L[f_2(t)]$，则
+
+$$
+L[\alpha f_1(t)+\beta f_2(t)]=\alpha L[f_1(t)]+\beta L[f_2(t)]
+$$
+
+$$
+L^{-1}[\alpha F_1(s)+\beta F_2(s)]=\alpha L^{-1}[F_1(s)]+\beta L^{-1}[F_2(s)]
+$$
+
+### 微分性质（时域）
+
+若$L[f(t)]=F(s)$，假设$f^{(n)}(t)$存在且连续，则
+
+$$
+\begin{aligned}
+L[f'(t)]&=\int_0^{+\infty}f'(t)e^{-st}dt\\
+&=\left.f(t)e^{-st}\right\vert^{+\infty}_{0}-\int_0^{+\infty}f(t)de^{-st}\\
+&=\left.f(t)e^{-st}\right\vert^{+\infty}_{0}+s\int_0^{+\infty}f(t)e^{-st}dt\\
+&\bf{=sL[f(t)]-f(0)=sF(s)-f(0)\quad(Res>c_0)}\\
+\end{aligned}
+$$
+
+**推论：** 对自然数$n$,有
+
+$$
+L[f^{(n)}(t)]=s^nL[f(t)]-s^{n-1}f(0)-s^{n-2}f'(0)-\cdots -f^{(n-1)}(0)
+$$
+
+
+### 微分性质（s域）
+
+有拉氏变换存在定理，可以得到像函数的微分性质：
+
+若$L[f(t)]=F(s)$，则
+
+$$
+F'(s)=L[-tf(t)]\quad(Res>c_0)
+$$
+
+一般地，对自然数$n$，有
+
+$$
+F^{(n)}(s)=(-1)^nL[t^nf(t)]\quad(Res>c_0)
+$$
 
 ### 积分性（时域）
 

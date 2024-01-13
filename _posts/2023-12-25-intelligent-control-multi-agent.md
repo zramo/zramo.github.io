@@ -31,3 +31,7 @@ categories: intelligent_control
 
 ---
 
+多智能体系统的协同控制
+
+Kronecker积
+

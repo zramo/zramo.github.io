@@ -57,3 +57,8 @@ Fourier变换
 # 极大似然估计方法
 
 极大似然估计(ML) Maximum Likelihood Estimation
+
+# 智能辨识方法
+
+误差反向传播神经网络，简称
+BP网络（Back Propagation）
