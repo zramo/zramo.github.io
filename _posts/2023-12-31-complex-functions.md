@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "复变函数知识点整理"
-date: 2023-12-01 06:00:00 +0800
+date: 2023-12-31 06:00:00 +0800
 categories: math
 ---
 # 1 复数与复变函数
@@ -177,7 +177,13 @@ $$
 若曲线$c$由$c_1$与$c_2$连接而成，则$$
 \int_c f(z)dz=\int_{c_1} f(z)dz+\int_{c_2} f(z)dz$$
 
-
+> **积分估计定理**
+>
+> 设函数$f(z)$在曲线C上连续，且$\vert f(z)\vert\le M, z\in C$，则
+> $$
+> \left\vert\int_Cf(z)dz\right\vert\le\int_C\left\vert f(z)\right\vert ds\le ML,
+> $$
+> 其中L是C的长度，中间的积分为第一类曲线积分
 ## 复变函数积分的一般计算法
 
 ### 化为线积分
