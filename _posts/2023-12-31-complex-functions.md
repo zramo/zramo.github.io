@@ -92,11 +92,13 @@ $u(x,y)$和$v(x,y)$在此点$(x,y)$可微,而且满足C-R方程.
 若函数$f(z)=u(x,y)+iv(x,y)$可导，则其导数
 
 $$
-f'(z)=
+\begin{aligned}
+f'(z)&=
 \frac{\partial u}{\partial x} + i\frac{\partial v}{\partial x}=
-\frac{\partial v}{\partial y} + i\frac{\partial v}{\partial x}=
+\frac{\partial v}{\partial y} + i\frac{\partial v}{\partial x}\\&=
 \frac{\partial v}{\partial y} - i\frac{\partial u}{\partial y}=
-\frac{\partial u}{\partial x} - i\frac{\partial u}{\partial x}
+\frac{\partial u}{\partial x} - i\frac{\partial u}{\partial y}
+\end{aligned}
 $$
 
 ## 调和函数
@@ -200,7 +202,7 @@ $$
 \int_c \frac{dz}{(z-z_0)^n}=
 \begin{cases}
 2\pi i, n = 1\\
-0, n = 0
+0, n \neq 0
 \end{cases}
 $$
 
@@ -842,7 +844,7 @@ $$
 d\theta=\frac{1}{ie^{i\theta}}de^{i\theta}=\frac{1}{iz}dz
 $$
 
-即可变换为$|z|=1$沿正向积分如下
+即可变换为$\vert z\vert=1$沿正向积分如下
 
 $$
 \int_0^{2\pi}R(\sin\theta, \cos\theta)d\theta=\int_{|z|=1}R\left[\frac{z-z^{-1}}{2i}, \frac{z+z^{-1}}{2}\right]\frac{1}{iz}dz
@@ -855,7 +857,7 @@ R(x)=\frac{P(x)}{Q(x)}=\frac{x^n+a_1x^{n-1}+\cdots+a_n}{x_m+b_1x^{m-1}+\cdots+b_
 $$
 
 $$
-\int_{-\infty}^{\infty}R(x)e^{i\alpha x} dx=
+\int_{-\infty}^{\infty}R(x) dx=
 2\pi i\sum^n_{k=1}Res\left[R(z),z_k\right]
 $$
 

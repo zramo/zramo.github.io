@@ -420,29 +420,140 @@ $$
 F^{(n)}(s)=(-1)^nL[t^nf(t)]\quad(Res>c_0)
 $$
 
-### 积分性（时域）
+### 积分性质（时域）
 
-### 位移性（时域）
+设$F(s)=L[f(t)]$，则
 
-### 位移性（频域）
+$$
+L\left[\int_0^tf(\tau)d\tau \right]=\frac{1}{s}F(s)
+$$
 
+一般地，有
+
+$$
+L\left[
+    \begin{gathered}
+    \underbrace{\int_0^tdt\int_0^tdt\cdots\int_0^t}&f(t)dt\\
+    n次&
+    \end{gathered}
+    \right]=\frac{1}{s^n}F(s)
+$$
+
+### 积分性质（s域）
+
+由拉氏变换存在定理，可以得到像函数的积分性质：
+
+设$\lim\limits_{t\rightarrow 0^+}\frac{f(t)}{t}$存在，且积分$\int_s^\infty F(u)du$收敛，则
+
+$$
+\int_s^\infty F(u)du=L\left[\frac{f(t)}{t}\right]
+$$
+
+一般地，若$\lim\limits_{t\rightarrow 0}\frac{f(t)}{t^n}$存在，有
+
+$$
+
+\begin{gathered}
+    L\left[\frac{f(t)}{t^n}\right]=&
+    \underbrace{
+        \int_s^{+\infty} ds\int_s^{+\infty} ds\cdots\int_s^{+\infty}
+    }&
+    F(s) ds,\quad n=1,2,\cdots\\
+    &n次&
+\end{gathered}
+$$
+
+**推论**
+
+由像函数的积分性质有
+$$
+\begin{aligned}
+\int_s^\infty F(u)du&=L\left[\frac{f(t)}{t}\right]\\
+&=\int^{+\infty}_{0}\frac{f(t)}{t}e^{-st}dt
+\end{aligned}
+$$
+即
+
+$$
+\begin{aligned}
+\int_0^\infty F(u)du=\int^{+\infty}_{0}\frac{f(t)}{t}dt
+\end{aligned}
+$$
+
+### 位移性质
+
+若$L[f(t)]=F(s)$，则有
+
+$$
+L[e^{at}f(t)]=F(s-a),\quad (Re(s-a)>c_0)
+$$
+
+**证明：**
+
+$$
+\begin{aligned}
+L[e^{at}f(t)]&=\int_0^{+\infty}e^{at}f(t)e^{-st}dt\\
+&=\int_0^{+\infty}f(t)e^{-(s-a)t}dt\\
+&=F(s-a)
+\end{aligned}
+$$
+
+### 延迟性质
+
+若$L[f(t)]=F(s)$，又$t<0$时$f(t)=0$，则对于任一非负实数$\tau$，有
+
+$$
+\begin{cases}
+L[f(t-\tau)]=e^{-s\tau}F(s)\\
+L^{-1}[e^{-s\tau}F(s)]=f(t-\tau)
+\end{cases}
+$$
+
+### 相似性质
+
+设$L[f(t)]=F(s)$，则对$a>0$有
+
+$$
+L[f(at)]=\frac{1}{a}F\left(\frac{s}{a}\right),\quad(Res>ac_0)
+$$
+
+定义换元证明之
+
+### 初值和终值定理
+
+$$
+f(0^+)=\lim_{s\rightarrow\infty}sF(s)
+$$
+
+$$
+f(+\infty)=\lim_{s\rightarrow 0}sF(s)
+$$
+
+### 卷积定理
+
+
+**拉氏变换的卷积：**
+
+$$
+f_1(t)*f_2(t)=\int_0^tf_1(\tau)f_2(t-\tau)d\tau
+$$
+
+
+**定理：**假设$f_1(t),f_2(t)$满足拉氏变换存在定理中的条件，且$L[f_1(t)]=F_1(s)$，$L[f_2(t)]=F_2(s)$，则$f_1(t)*f_2(t)$的拉氏变换一定存在，且
+
+$$
+\begin{cases}
+L[f_1(t)*f_2(t)]=F_1(s)F_2(s)\\
+L^{-1}[F_1(s)F_2(s)]=f_1(t)*f_2(t)
+\end{cases}
+$$
+
+<!--
 ## 几个积分公式
- 
-$$
 
- \int_{-\infty}^{+\infty}f(t)\delta(t)dt=f(0)
 $$
-
- 
-$$
-
- \int_{-\infty}^{+\infty}f(t)\delta(t-t_0)dt=f(t_0)
-$$
-
- 
-$$
-
  \int_{0}^{+\infty}f(t)e^{-kt}dt=L[f(t)]\vert _{s=k}
 $$
 
 拉普拉斯变换考试时必出一个大题
+-->
