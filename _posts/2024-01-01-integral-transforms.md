@@ -363,11 +363,13 @@ L[f(t)]=\int
 |$L[\cos kt]=\frac{s}{s^2+k^2}$|
 
  
-$$
 
+**周期函数的拉氏变换公式：**
+
+$$
 设f(t+T)=f(t)，则
 
-L[f(t)]=\frac{1}{1-e^{-Ts}}\int^T_0f(t)dt$$
+L[f(t)]=\frac{1}{1-e^{-sT}}\int^T_0f(t)e^{-st}dt$$
 
 
 ## 性质

@@ -413,11 +413,11 @@ f(z)\pm g(z)=\sum_{n=0}^\infty a_nz_n\pm \sum_{n=0}^\infty b_nz_n=\sum^\infty_{n
 $$
 
 \begin{aligned}
-f(z)g(z)&=\left(\sum^\infty_{n=0}a_nz^n\right)\left(\sum_{n=0}^\infty b_nz^n\right)=\sum^\infty_{n=0}\left(\sum^\infty_{k=0}a_kz_k\cdot b_{n-k}z^{n-k}\right)
+f(z)g(z)&=\left(\sum^\infty_{n=0}a_nz^n\right)\left(\sum_{n=0}^\infty b_nz^n\right)=\sum^\infty_{n=0}\left(\sum^\infty_{k=0}a_kz_k\cdot b_{n-k}z^{n-k}\right)\\
 
-&=\sum^\infty_{n=0}c_nz^n,\ \ c_n=\sum^\infty_{k=0}a_kb_{n-k}
+&=\sum^\infty_{n=0}c_nz^n,\ \ c_n=\sum^\infty_{k=0}a_kb_{n-k}\\
 
-&=\sum^\infty_{n=0}\left(\sum^\infty_{k=0}a_kb_{n-k}\right)z^n
+&=\sum^\infty_{n=0}\left(\sum^\infty_{k=0}a_kb_{n-k}\right)z^n\\
 
 &,R\ge min\{R_1,R_2\}
 
@@ -497,12 +497,9 @@ $$
 
 ### 洛朗展开定理
  
-$$
 
-设函数f(z)在圆环域R_1<\vert z-z_0\vert <R_2内处处解析，c为圆环域内绕z_0的任意一条正向简单闭曲线，
+设函数$f(z)$在圆环域$R_1<\vert z-z_0\vert<R_2$内处处解析，$c$为圆环域内绕$z_0$的任意一条正向简单闭曲线，则在此圆环域内，有$f(z)=\sum^\infty_{n=-\infty}c_n(z-z_0)^n$，且展开式唯一
 
-则在此圆环域内，有f(z)=\sum^\infty_{n=-\infty}c_n(z-z_0)^n，且展开式唯一
-$$
 
 
 ### 解析函数的洛朗展开法
@@ -511,19 +508,11 @@ $$
 
 ### 利用洛朗级数求围线积分
  
-$$
 
-设f(z)在r<\vert z-z_0\vert <R内解析，c为r<\vert z-z_0\vert <R内的任何一条正向简单闭曲线，
 
-则\oint_cf(z)dz=2\pi ic_{-1}。其中c_{-1}为f(z)在r<\vert z-z_0\vert <R
-内洛朗展开式中\frac{1}{z-z_0}的系数
+设$f(z)$在$r<\vert z-z_0\vert<R$内解析，$c$为$r<\vert z-z_0\vert <R$内的任何一条正向简单闭曲线，则$\oint_cf(z)dz=2\pi ic_{-1}$。其中$c_{-1}$为$f(z)$在$r<\vert z-z_0\vert <R$内洛朗展开式中$\frac{1}{z-z_0}$的系数
 
-$$
-
- 
-即围线积分可转化为求被积函数的洛朗展开式中$$
-(z-z_0)^{-1}$$
-的系数
+即围线积分可转化为求被积函数的洛朗展开式中$(z-z_0)^{-1}$的系数
 
 # 5 留数
 
@@ -558,9 +547,9 @@ $$
 
 ##### 可去奇点
  
-$$
 
-洛朗展式中不含z-z_0的负幂项：
+洛朗展式中不含$z-z_0$的负幂项：
+$$
 f(z)=c_0+c_1(z-z_0)+c_2(z-z_0)^2+\cdots
 $$
 
@@ -569,13 +558,14 @@ $$
  
 
 
-展开式中含有限项$z-z_0$的负幂项
-$$
+展开式中含有限项$z-z_0$的负幂项：
+
+$
 f(z)=c_{-m}(z-z_0)^{-m}+c_{-(m-1)}(z-z_0)^{-(m-1)}+\cdots+c_{-1}(z-z_0)^{-1}+c_0+c_1(z-z_0)+c_2(z-z_0)^2+\cdots
 =\frac{g(z)}{(z-z_0)^m},
-$$
-$$
-其中g(z)=c_{-m}+c_{-(m-1)}(z-z_0)+\cdots+c_{-1}(z-z_0)^{m-1}+c_{0}(z-z_0)^{m}+\cdots在z_0解析，$$
+$
+
+其中$g(z)=c_{-m}+c_{-(m-1)}(z-z_0)+\cdots+c_{-1}(z-z_0)^{m-1}+c_{0}(z-z_0)^{m}+\cdots$在$z_0$解析，
 
 
 且
@@ -586,9 +576,9 @@ $$g(z_0)\neq 0, m \ge 1, c_{-m}\neq 0$$
  
 展开式中含无穷多项$z-z_0$的负幂项
 
-$$
+$
 f(z)=\cdots+c_{-m}(z-z_0)^{-m}+c_{-(m-1)}(z-z_0)^{-(m-1)}+\cdots+c_{-1}(z-z_0)^{-1}+c_0+c_1(z-z_0)+c_2(z-z_0)^2+\cdots
-$$
+$
 
 
 #### 孤立奇点的判别方法
@@ -615,12 +605,8 @@ $$
 
 ###### 零点的概念
  
-$$
 
-不恒为零的解析函数f(z)，如果能表示成f(z)=(z-z_0)^m\varphi(z),
-
-其中\varphi(z)在z_0解析，\varphi(z_0)\neq 0, m为正整数，称z_0为f(z)的m级零点
-$$
+不恒为零的解析函数$f(z)$，如果能表示成$f(z)=(z-z_0)^m\varphi(z)$，其中$\varphi(z)$在$z_0$解析，$\varphi(z_0)\neq 0$, $m$为正整数，称$z_0$为$f(z)$的$m$级零点
 
 
 ###### 零点级数判别的充要条件
@@ -701,14 +687,14 @@ $$
 
 ##### 证明：
 
-$$
+$
 (z-z_0)^nf(z)=c_{-n}+c_{-(n-1)}(z-z_0)^1+\cdots+c_{-1}(z-z_0)^{m-1}+c_0(z-z_0)^n+\cdots
-$$
+$
 
-$$
+$
 \frac{d^{n-1}}{dz^{n-1}}\left[(z-z_0)^nf(z)\right]=
 c_{-1}(m-1)!+c_0 m(m-1)2(z-z_0)+\cdots
-$$
+$
 
 即
 
