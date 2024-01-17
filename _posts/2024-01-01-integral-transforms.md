@@ -219,12 +219,11 @@ f (t)=\frac{1}{2\pi}\int_{-\infty}^{+\infty}\left[\int_{-\infty}^{+\infty}f(\tau
  
 |$f(t)$|$F[f(t)]$|
 |------|---------|
-|阶跃函数$u(t)$|$\frac{1}{j\omega}+\pi\delta(\omega)$|
+|阶跃函数$u(t)$|$\frac{1}{i\omega}+\pi\delta(\omega)$|
 |单位脉冲函数$\delta(t)$|$1$|
 |$1$|$2\pi\delta(\omega)$|
 |$F[\delta(t)]=1$ | $F^{-1}[1]=\delta(t)$ |
 |$F[\delta(t-t_0)]=e^{-i\omega_0 t}$ | $F^{-1}[e^{-i\omega t_0}]=\delta(t-t_0)$|
-| $F[1]=2\pi\delta(\omega)$ | $F^{-1}[2\pi\delta(\omega)]=1$ |
 | $F[e^{i\omega_0 t}]=2\pi\delta(\omega-\omega_0)$ | $F^{-1}[2\pi\delta(\omega-\omega_0)]=e^{i\omega t_0}$ |
 
 ## 傅里叶变换的性质
