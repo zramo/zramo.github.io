@@ -45,6 +45,14 @@ $$
 
 ## 一般最小二乘法
 
+$$
+\hat\theta_{LS}=(H_N^T(n)H_N(n))^{-1}H^T_N(n)Y_N
+$$
+
+$$
+\hat\theta_{LS}=(X_N^T(n)X_N(n))^{-1}X^T_N(n)Y_N
+$$
+
 $n$维变量$X=(x_1,\dots,x_n)^T$
 
 设已有$N$个时刻的观测值：$\{y(k)\}$，$\{X(k)\}$，$k=1,2,\dots,N$

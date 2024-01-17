@@ -264,6 +264,12 @@ $$
 F[f^{(n)}(t)]=(j\omega)^nF(\omega), \vert t\vert \rightarrow+\infty, f^{(n-1)}(t)\rightarrow0$$
 
 
+### 微分性（频域）
+
+$$
+\bf{F^{-1}[F^{(n)}(\omega)]=(-it)^nf(t)}
+$$
+
 ### 坐标缩放性质
  
 设$a$是不等于$0$的实常数，若$F[f(t)]=F(\omega)$，则
