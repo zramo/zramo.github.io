@@ -12,6 +12,8 @@ p(z\vert\hat\theta)\stackrel{max}{\longrightarrow}
 p(z\vert\theta_0)
 $$
 
+$$\left.\left[\frac{\partial L(z_L\vert\theta)}{\partial \theta}\right]^{T}\right\vert_{\hat{\theta}_{ML}}=0$$
+
 > 极大似然原理的核心思想
 
 

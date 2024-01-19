@@ -46,7 +46,7 @@ $$
 ## 一般最小二乘法
 
 $$
-\hat\theta_{LS}=(H_N^T(n)H_N(n))^{-1}H^T_N(n)Y_N
+\hat\theta_{LS}=(H_N^TH_N)^{-1}H^T_NY_N
 $$
 
 $$
