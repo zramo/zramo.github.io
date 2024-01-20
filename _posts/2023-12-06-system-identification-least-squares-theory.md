@@ -238,7 +238,7 @@ $$
 
 ---
 
-# 辅助变量法IV
+# 辅助变量法IV Instrumental Variable Method
 
 ---
 
@@ -262,7 +262,7 @@ $$
 （2）多数性能类似于最小二乘法或辅助变量法。
 
 新息$
-\tilde{z}(k)=z(k)-\textbf{h}^T(k) \hat{\theta}(k-1)
+\tilde{z}(k)=z(k)-\hat{z}(k)=z(k)-\textbf{h}^T(k) \hat{\theta}(k-1)
 $
 
 //通过扩维的技巧

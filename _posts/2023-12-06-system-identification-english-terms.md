@@ -51,6 +51,8 @@ Fourier变换
 
 单输入单输出 Single Input Single Output
 
+广义最小二乘法 Generalized LS
+
 增广最小二乘法 Extended LS
 
 
