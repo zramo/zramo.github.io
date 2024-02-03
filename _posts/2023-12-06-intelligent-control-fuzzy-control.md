@@ -43,6 +43,7 @@ $$
 |**交**|$C=A\cap B$|$c_{ij}=\wedge[a_{ij},b_{ij}]=a_{ij}\wedge b_{ij}$，即逐元素取小|
 |**补**|$A\rightarrow\bar A$|$\bar A = [1-a_{ij}]$，即逐元素取补|
 |乘（**合成**）|$C=A\circ B$|$c_{ij}=\mathop\vee\limits_{k=1}^{n}\left[a_{ik}\wedge b_{kj}\right]$，即按照矩阵乘法运算顺序先取小后取大|
+|笛卡儿积|$A\rightarrow B$|$A\rightarrow B=A\times B=A^T \wedge B$|
 
 **给出模糊矩阵，计算模糊矩阵的交、并与合成**
 
